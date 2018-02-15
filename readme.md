@@ -1,7 +1,10 @@
 ## Powerswitch API
 
-Powerswitch has developed a new feature for retailers to access information about customers that are potentially switching. This consists of
-a simple set of url query params passed along once the user clicks the switch link on Powerswitch.
+Powerswitch has developed a new feature for retailers to access information about customers that are potentially switching. This is provided in the form of URL query params passed along when the user clicks the switch link on Powerswitch.
+
+Here's a real example: 
+
+`?a=52+XXX+St%2C+XXX%2C+XXXX+XXXX%2C+New+Zealand&address_id=ChXXXXXVk2ohQW0RsKgzxaxeR88&electricity_icp=00XXXX3000WR9F6&electricity_plan=Super+Saver+Uncontrolled&estimated_usage=17501&profile_id=QRdAlAVjwj&x=175.6657305&y=-40.9368174`
 
 ```
 {
@@ -17,6 +20,7 @@ a simple set of url query params passed along once the user clicks the switch li
   electricity_plan: "General Plan",
   gas_plan: "",
   gas_icp: "",
+  estimated_usage: 12000,
 }
 ```
 
@@ -42,3 +46,4 @@ a simple set of url query params passed along once the user clicks the switch li
 
 - `<energy_type>_plan` : The users selected plan name. Always present (one or both of gas or electricity).
 
+- `estimated_usage` : Estimate of usage in kWh/year.
